@@ -1,6 +1,6 @@
 import sys
 
-
+# Diccionario con las ventas del año
 ventas = {
     "Enero": 15000,
     "Febrero": 22000,
@@ -15,24 +15,29 @@ ventas = {
     "Noviembre": 91000,
     "Diciembre": 21000,
 }
-while True:
 
-    print("Menu Principal")
-    print("1. ejecutar algo")
-    print("2. ejecutar algo")
-    print("3. ejecutar algo")
-    print("4. para salir")
 
-    opcion = input("Ingresa la opcion")
 
-    if opcion == "1":
-        print("listo ...1")
-    elif opcion == "2":
-        print("listo ...2")
-    elif opcion == "3":
-        print("listo ...3")
-    elif opcion == "4":
-        print("saliste")
-        break
+
+try:
+    if len(sys.argv) > 1:
+    
+        valor = int(sys.argv[1])
+
+        nueva_lista = []
+#Valores >= valor
+        for i in ventas:
+            if ventas[i] >= valor:
+                nueva_lista.append((i, ventas[i]))
+
+        resultados = dict(nueva_lista)
+        print(resultados)
+        
     else:
-        print("opcion no permitida")
+        print("Ejecutar desde consola: python mayor_a valor númerico\n\n\n")
+
+except ValueError:
+    print("Ingresar solo valores númericos despues de mayor_a.py\n\n\n")
+
+
+
