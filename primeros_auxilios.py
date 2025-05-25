@@ -1,10 +1,28 @@
 #Programa de primeros auxilios.
 
+print("Este es es un Programa de Primeros Auxilios")
 # Inicio
 
-# Responde a estimulos?
+print("Inicio - La persona esta lastimada")
 
-# Si (Valora la necesidad de llevarlo al hospital más cercano) -> Fin del programa
+
+# Responde a estimulos?
+opciones = ["si","no"]
+
+
+while True:
+    persona = input("Responde a estimulos (Si o No): ")
+    persona = persona.lower()
+
+    if persona == "si":
+        print("Valorar la necesidad de llevarlo al hospital más cercano")
+        print("Fin del progrma")
+        break
+
+    if persona not in opciones:
+        print("Responder Si o No")
+
+# Si (Valora la necesidad de adllevarlo al hospital más cercano) -> Fin del programa
 
 # No -> (Abrí la vía Aérea)
 
