@@ -34,10 +34,10 @@ try:
         print(resultados)
         
     else:
-        print("Ejecutar desde consola: python mayor_a valor númerico\n\n\n")
+        print("Ejecutar desde consola: python mayor_a valor númerico")
 
 except ValueError:
-    print("Ingresar solo valores númericos despues de mayor_a.py\n\n\n")
+    print("Ingresar solo valores númericos despues de mayor_a.py")
 
 
 
